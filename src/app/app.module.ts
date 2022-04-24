@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { ImageLazyLoadingDirective } from './helpers/directives/imageLazyLoading.direvtive';
 import { FormsModule } from '@angular/forms';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     LazyLoadImageModule,
-    FormsModule
+    FormsModule,
+    VirtualScrollerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

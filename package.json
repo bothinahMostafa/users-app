@@ -15,7 +15,6 @@
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
-    "@angular/material": "^13.3.4",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
@@ -23,6 +22,7 @@
     "file-saver": "^2.0.5",
     "moment": "^2.29.3",
     "ng-lazyload-image": "^9.1.2",
+    "ngx-virtual-scroller": "^4.0.3",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

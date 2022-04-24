@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit{
   }
 
   getUsersList(res) {
-    this.usersList = res;
+    this.usersList = [...res, ...res, ...res, ...res, ...res, ...res, ...res];
     this.filteredUsersList = this.usersList;
   }
 
