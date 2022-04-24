@@ -26,3 +26,14 @@
         color: #0971dd;
     }
 }
+
+.filter-bar {
+    margin: 2rem auto;
+    width: 80%;
+    .btn.btn-secondary {
+        display: block;
+        padding: 0.5rem 3rem;
+        margin: 1rem 0 0 auto;
+    }
+}
+

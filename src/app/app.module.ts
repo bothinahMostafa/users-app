@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { ImageLazyLoadingDirective } from './helpers/directives/imageLazyLoading.direvtive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImageLazyLoadingDirective } from './helpers/directives/imageLazyLoading
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-
-import { AppComponent } from './app.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 
@@ -17,7 +15,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     SharedModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
   ],
   exports: [RouterModule]
 })

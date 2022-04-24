@@ -1,4 +1,17 @@
 <div class="container-md">
+    <div class="filter-bar">
+        <!-- <form #f="ngForm" (submit)="filterUsers(f)"> -->
+            <div class="input-group">
+                <span class="input-group-text">Gender and City</span>
+                <input ngModel name="gender" type="text" aria-label="First name" class="form-control" placeholder="Gender" (input)="filterUserByGender($event)">
+                <input ngModel name="city" type="text" aria-label="Last name" class="form-control" placeholder="City" (input)="filterUserByCity($event)">
+              </div>
+              <button type="button" class="btn btn-secondary" (click)="exportListToCSV()">Export CSV</button>
+        <!-- </form> -->
+    </div>
+</div>
+  
+<div class="container-md">
     <div *ngFor="let user of filteredUsersList" class="card">
         <div class="row">
             <!-- <div class="col-12 "><img appImageLazyLoading src="{{user.picture.thumbnail}}" id="{{user.picture.large}}" class="card__img"></div> -->
