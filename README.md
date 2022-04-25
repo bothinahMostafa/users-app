@@ -1,8 +1,4 @@
-# Author
-
-Bothainah Mostafa
-
-## MyUsersApp
+# MyUsersApp
 
 This project are a demo to control some random users data and display them in nice responsive design 
 
