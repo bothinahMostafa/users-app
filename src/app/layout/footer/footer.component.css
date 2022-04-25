@@ -1,0 +1,16 @@
+.social-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: invert(47%) sepia(10%) saturate(398%) hue-rotate(167deg) brightness(93%) contrast(85%);
+          filter: invert(47%) sepia(10%) saturate(398%) hue-rotate(167deg) brightness(93%) contrast(85%);
+}
+
+@media (max-width: 576px) {
+  .footer-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=footer.component.css.map */

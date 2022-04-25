@@ -7,20 +7,19 @@ import { UserListComponent } from './users-list/user-list.component';
 
 const routes: Routes = [
   {
-    path: 'users',
+    path: '',
     component: UserComponent,
-    redirectTo: 'users-list',
     children: [
       {
-        path: 'users-list',
+        path: '',
         component: UserListComponent
       }
     ]
   }
 ];
+
 @NgModule({
   imports: [
-    SharedModule,
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule]

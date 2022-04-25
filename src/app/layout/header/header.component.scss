@@ -1,0 +1,32 @@
+.bg-purple {
+    background-color: #73458d;
+}
+
+.btn.btn-outline-success {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+        color: #73458d;
+        background-color: #fff;
+    }
+}
+
+.navbar-mobile {
+    border: 1px solid #fff;
+    padding: 3px;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    .navbar-mobile__icon {
+        width: 30px;
+        height: 30px;
+        filter: invert(1);
+    }  
+}
+
+@media (min-width: 992px) {
+    .navbar-mobile {
+        display: none !important;
+    }
+}
+

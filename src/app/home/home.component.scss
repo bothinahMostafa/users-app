@@ -1,44 +1,44 @@
-.card {
-    width: 80%;
-    margin: 2rem auto;
-    padding: 2rem;
-    box-shadow: 0px 2px 8px 4px #77777729;
-    border-radius: 16px;
-    background-color: #ececec;
-
-    .label {
-        color: #595353;
-        font-weight: bold;
+@keyframes rotating {
+    0% {
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotateY(0deg);
+      transform-origin: center;
+    }
+    50% {
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotateY(180deg);
+      transform-origin: center;
     }
 
-    &__img {
-        width: 10rem;
-        height: 10rem;
-        margin-bottom: 2rem;
+    100% {
+        transform: rotateY(-0deg);
+        transform-origin: center;
     }
-
-    &__name {
-        font-weight: bold;
-        font-size: 1.35rem;
-    }
-
-    &__email {
-        color: #0971dd;
-    }
-}
-
-.filter-bar {
-    margin: 2rem auto;
-    width: 80%;
-    .btn.btn-secondary {
-        display: block;
-        padding: 0.5rem 3rem;
-        margin: 1rem 0 0 auto;
-    }
-}
-
-virtual-scroller {
+  }
+.home-wrapper {
+    padding: 1rem;
     width: 100%;
-    height: 430px;
-}
+    height: 80vh;
+    background: linear-gradient(to right, #d9d9d9, #eed2ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    .rotating {
+        -webkit-animation: rotating 2s linear infinite;
+        -moz-animation: rotating 2s linear infinite;
+        -o-animation: rotating 2s linear infinite;
+        animation: rotating 10s linear infinite;
+        
+        h1 {
+            font-size: 7rem;
+            color: #fff;
+            text-align: center;
+            text-shadow: 3px 6px 4px grey;
+        }
+    }
+}

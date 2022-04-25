@@ -1,0 +1,13 @@
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(47%) sepia(10%) saturate(398%) hue-rotate(167deg) brightness(93%) contrast(85%);
+}
+
+
+@media (max-width: 576px) { 
+    .footer-list {
+        flex-direction: column;
+    }
+}

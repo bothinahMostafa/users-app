@@ -1,0 +1,29 @@
+<div class="container-md">
+    <div class="filter-bar">
+            <div class="input-group">
+                <span class="input-group-text">Gender and City</span>
+                <input ngModel name="gender" autocomplete="off" type="text" aria-label="First name" class="form-control" placeholder="Gender" (input)="filterUserByData($event)">
+                <input ngModel name="city" autocomplete="off" type="text" aria-label="Last name" class="form-control" placeholder="City" (input)="filterUserByData($event)">
+            </div>
+            <button type="button" class="btn btn-secondary" (click)="exportListToCSV()">Export CSV</button>
+    </div>
+</div>
+  
+<div class="container-md">
+    <virtual-scroller #scroll [items]="filteredUsersList">
+        <div *ngFor="let user of scroll.viewPortItems" class="card">
+            <div class="row">
+                <!-- <div class="col-12 "><img appImageLazyLoading src="{{user.picture.thumbnail}}" id="{{user.picture.large}}" class="card__img"></div> -->
+                <div class="col-12 "><img [defaultImage]="user.picture.thumbnail" [lazyLoad]="user.picture.large" class="card__img"></div>
+                <div class="col-12 card__name"><span class="label">Name: </span>{{user.name}}</div>
+                <div class="col-12 card__email"><span class="label">E-mail: </span>{{user.email}}</div>
+                <div class="col-md-3 col-12"><span class="label">Gender: </span>{{user.gender}}</div>
+                <div class="col-md-3 offset-md-1 col-12"><span class="label">Age: </span>{{user.age}} years</div>
+                <div class="col-12"><span class="label">Phone: </span>{{user.phone}}</div>
+                <div class="col-12"><span class="label">Seniority Level: </span>{{user.seniority}}</div>
+                <div class="location"><span class="label">Location: </span>{{user.location.street}} , {{user.location.city}}</div>
+            </div>
+        </div>
+    </virtual-scroller>
+  
+</div>

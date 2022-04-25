@@ -1,30 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { ImageLazyLoadingDirective } from './helpers/directives/imageLazyLoading.direvtive';
-import { FormsModule } from '@angular/forms';
-import { VirtualScrollerModule } from 'ngx-virtual-scroller';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home/home.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ImageLazyLoadingDirective
+    FooterComponent,
+    HeaderComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     AppRoutingModule,
     HttpClientModule,
-    LazyLoadImageModule,
-    FormsModule,
-    VirtualScrollerModule
+    SharedModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

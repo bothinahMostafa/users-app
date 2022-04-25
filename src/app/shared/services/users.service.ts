@@ -2,9 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import * as moment from "moment";
 import { Observable, of } from "rxjs";
-import { mergeMap } from "rxjs/operators";
 import { map } from "rxjs/operators";
-import { UserModel } from "../models/user.model";
 
 
 @Injectable({
