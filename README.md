@@ -1,15 +1,25 @@
 # MyUsersApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+This project are a demo to control some random users data and display them in nice responsive design 
 
+## third parties libararies used 
+
+bootstrap (help to build nice UI design)
+file-saver (to export json array to csv) 
+moment (to make some manipulations in date objects)
+ng-lazyload-image (lazy load large image that may effect application performance)
+ngx-virtual-scroller (to handle large number of array item that may over load on the DOM as the total number of elements remains the same as the user scrolls, just that the current ones are replaced with the next ones)
+
+## clone Repo 
+
+git clone https://github.com/bothinahMostafa/users-app.git
+
+## switch to master branch
+
+git checkout master
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
@@ -22,6 +32,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
