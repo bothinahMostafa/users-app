@@ -4,11 +4,11 @@ This project are a demo to control some random users data and display them in ni
 
 ## third parties libararies used 
 
-bootstrap (help to build nice UI design)
-file-saver (to export json array to csv) 
-moment (to make some manipulations in date objects)
-ng-lazyload-image (lazy load large image that may effect application performance)
-ngx-virtual-scroller (to handle large number of array item that may over load on the DOM as the total number of elements remains the same as the user scrolls, just that the current ones are replaced with the next ones)
+*bootstrap (help to build nice UI design)
+*file-saver (to export json array to csv) 
+*moment (to make some manipulations in date objects)
+*ng-lazyload-image (lazy load large image that may effect application performance)
+*ngx-virtual-scroller (to handle large number of array item that may over load on the DOM as the total number of elements remains the *same as the user scrolls, just that the current ones are replaced with the next ones)
 
 ## clone Repo 
 
