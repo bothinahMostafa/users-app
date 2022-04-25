@@ -22,23 +22,23 @@ export class UserService {
                 return of(null);
             }
             return users.map(user => {
-                let {gender, name: {title, first, last} , location: {street, city}, email, registered: {date, age}, phone, picture: {large, thumbnail}} = user;
+                let {gender, name: {title, first, last} , location: {street, city}, email, registered: {date}, dob: {date :dob}, phone, picture: {large, thumbnail}} = user;
 
                 return {
                     name: `${title} ${first} ${last}`,
                     gender,
                     location: { street: `${street.number} ${street.name}`, city},
                     email,
-                    seniority: this.calculateSeniority(date),
+                    seniority: this.calculateFromNow(date),
                     phone,
-                    age,
+                    age: this.calculateFromNow(dob).replace('ago', 'old'),
                     picture : {large, thumbnail},
-                    id: {large}
+                    id: large
                 };
             });
         })); 
     }
-    private calculateSeniority(date) {
+    private calculateFromNow(date) {
       return moment(date).fromNow();
     }
 

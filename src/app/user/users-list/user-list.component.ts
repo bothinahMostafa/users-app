@@ -71,10 +71,9 @@ export class UserListComponent implements OnInit {
    * export users list to csv
    */
   exportListToCSV() {
-    let users = [...this.usersList];
-    let filedKeys = Object.keys(users[0]);
+    let filedKeys = Object.keys(this.usersList[0]);
     filedKeys.splice(filedKeys.indexOf('id', 1));
-    let csv = users.map(user => this.mapUserData(user, filedKeys));
+    let csv = this.usersList.map(user => this.mapUserData(user, filedKeys));
     csv.unshift(filedKeys.join(','));
     let csvArray = csv.join('\r\n');
     var blob = new Blob([csvArray], {type: 'text/csv' })
