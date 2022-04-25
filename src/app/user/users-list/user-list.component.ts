@@ -13,9 +13,16 @@ export class UserListComponent implements OnInit {
   usersList: UserModel[];
   isImagesUpdated: boolean = false;
 
+  /**
+   * constructor
+   * @param userService 
+   */
   constructor(private userService: UserService) {
   }
 
+  /**
+   * on init function
+   */
   ngOnInit(): void {
     this.userService.getUsersList().subscribe({
       next: this.getUsersList.bind(this),
@@ -23,15 +30,28 @@ export class UserListComponent implements OnInit {
     });
   }
 
+  /**
+   * set users list when data is retrieved
+   * @param res 
+   */
   getUsersList(res) {
     this.usersList = res;
     this.filteredUsersList = this.usersList;
   }
 
+  /**
+   * handle http request error
+   * @param error 
+   */
   handleUsersListError(error) {
     console.log(error);
   }
 
+  /**
+   * filter users by gender or city and skip if search value is empty string
+   * @param event 
+   * @returns 
+   */
   filterUserByData(event) {
     if(event.target.value === ""){
       this.filteredUsersList = this.usersList;
@@ -47,6 +67,9 @@ export class UserListComponent implements OnInit {
    
   }
 
+  /**
+   * export users list to csv
+   */
   exportListToCSV() {
     let users = [...this.usersList];
     let filedKeys = Object.keys(users[0]);
@@ -58,17 +81,20 @@ export class UserListComponent implements OnInit {
     saveAs(blob, "usersListFile.csv");
   }
 
-  mapUserData(user, filedKeys) {
-    return this.mapFiledKeys(user, filedKeys);
-  }
-
-  mapFiledKeys(user, filedKeys) {
+  /**
+   * map user data to a format that could be converted to csv 
+   * @param user 
+   * @param filedKeys 
+   * @returns string
+   */
+  mapUserData(user, filedKeys): string {
     const replacer = (key, value) =>
       value === null
         ? ''
         : value instanceof Object
         ? Object.values(value).join('-')
         : value;
-    return filedKeys.map(filedKey =>  JSON.stringify(user[filedKey], replacer)).join(',');
+
+       return filedKeys.map(filedKey =>  JSON.stringify(user[filedKey], replacer)).join(',');
   }
 }
