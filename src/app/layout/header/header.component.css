@@ -15,7 +15,7 @@
 .navbar-mobile {
   border: 1px solid #fff;
   padding: 3px;
-  position: fixed;
+  position: absolute;
   right: 15px;
   top: 15px;
 }
