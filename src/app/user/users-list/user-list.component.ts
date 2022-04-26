@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { saveAs } from 'file-saver';
 import { UserModel } from 'src/app/shared/models/user.model';
 import { UserService } from 'src/app/shared/services/users.service';
+import { cloneDeep } from 'lodash';
 
 @Component({
   selector: 'app-users-list',
@@ -36,6 +37,12 @@ export class UserListComponent implements OnInit {
    */
   getUsersList(res) {
     this.usersList = res;
+    this.filteredUsersList = this.usersList;
+  }
+
+  addCopyUser() {
+    const user = cloneDeep(this.usersList[0]);
+    this.usersList.push(user);
     this.filteredUsersList = this.usersList;
   }
 
