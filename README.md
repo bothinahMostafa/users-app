@@ -14,6 +14,8 @@ This project are a demo to control some random users data and display them in ni
     - (lazy load large image that may effect application performance)
 5. ngx-virtual-scroller 
     - (to handle large number of array item that may over load on the DOM as the total number of elements remains the *same as the user scrolls, just that the current ones are replaced with the next ones)
+6. cypress 
+    - used for e2e testing
 
 ## clone Repo 
 
@@ -34,8 +36,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- install cypress by npm install cypress --save-dev 
+- run e2e tests by command npx cypress open
 
 ## Creat and Running docker image
 - docker build -t my-users-app-image:latest  .
