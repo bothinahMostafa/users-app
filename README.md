@@ -42,7 +42,7 @@ Run `npx cypress open` to execute the e2e tests via [cypress]
 - docker build -t my-users-app-image:latest  .
 - docker run -d -p 8080:80 my-users-app-image:latest
 
-# Access you appliction container 
+# Access your appliction container 
 - visit http://localhost:8080/ on your browser
 
 ## List docker images
