@@ -33,10 +33,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Karma]
 
 ## Running end-to-end tests
-- npx cypress open
+- Run `npx cypress open` to execute the e2e tests via [cypress]
 
 ## Creat and Running docker image
 - docker build -t my-users-app-image:latest  .
